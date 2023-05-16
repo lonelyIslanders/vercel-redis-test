@@ -13,6 +13,7 @@ app.get('/addList', async (req, res) => {
 })
 
 app.get('/readList', async (req, res) => {
+
     const nums = req.query.nums;
     const time = await read(nums);
     const result = { message: `本次读取${nums}条数据，共计耗时${time}秒` };
